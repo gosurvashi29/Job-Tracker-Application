@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Logging</title>
+    <link rel="stylesheet" href="../css/job">
+</head>
+<body>
+    <header>
+        <h1>Job Application Logging</h1>
+    </header>
+
+    <section id="job-application-form">
+        <h2>Log a New Job Application</h2>
+        <form id="applicationForm" enctype="multipart/form-data">
+            
+
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required><br><br>
+
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" name="company_name" required><br><br>
+
+            <label for="application-date">Application Date:</label>
+            <input type="date" id="application-date" name="application-date" required><br><br>
+
+            <label for="status">Application Status:</label>
+            <select id="status" name="status" required>
+                <option value="applied">Applied</option>
+                <option value="interviewed">Interviewed</option>
+                <option value="offered">Offered</option>
+                <option value="rejected">Rejected</option>
+                <option value="accepted">Accepted</option>
+            </select><br><br>
+
+            <label for="notes">Notes:</label><br>
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+
+          
+
+            <button type="submit">Log Application</button>
+        </form>
+        <div id="resume-upload">
+            <label for="resume-upload">Upload Resume:</label>
+            <input type="file" id="file" name="resume-upload">
+            <button id="upload-btn">Upload Resume</button>
+        </div>
+        <div id="cover-letter-upload">
+            <label for="cover-letter-upload">Upload Cover Letter:</label>
+            <input type="file" id="file" name="cover-letter-upload">
+            <button id="upload-btn">Upload Cover Letter</button>
+        </div>
+    </section>
+
+    <section id="application-list">
+        <h2>Submitted Applications</h2>
+        <div id="applications">
+            <!-- List of logged job applications will be displayed here -->
+        </div>
+    </section>
+    <div class="centered" style="font-weight: bold; background-color: yellow;">Log In Company Information Management Section <a href ="../views/company">Company Information Management Section</a></div>  
+    
+      <script src="../Job"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+</body>
+</html>

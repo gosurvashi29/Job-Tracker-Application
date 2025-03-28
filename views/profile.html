@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker - Profile Management</title>
+    <link rel="stylesheet" href="../css/job">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Profile Management</h1>
+    </header>
+
+    <!-- Profile Form Section -->
+    <section id="profile-form">
+        <h2>Enter Your Profile Information</h2>
+        <form id="profileForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required><br><br>
+
+            <label for="career-goals">Career Goals:</label>
+            <textarea id="career-goals" name="career-goals" required></textarea><br><br>
+
+            <button type="submit">Save Profile</button>
+        </form>
+    </section>
+
+    
+    <section id="profile-display" style="display: none;">
+        <h2>Your Profile</h2>
+        <div id="profileDetails">
+            
+        </div>
+    </section>
+
+    
+    <div class="centered" style="font-weight: bold; background-color: yellow;"> 
+        Log Into Job Application Portal 
+        <a href="../views/job" style="font-weight: normal;">Job Application Log In</a>
+      </div>
+      
+    <script src="../profile"></script> 
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker - Job Application and Company Management</title>
+    <link rel="stylesheet" href="../css/job">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Job Tracker</h1>
+    </header>
+
+    <!-- Company Information Management Section -->
+    <section id="company-management">
+        <h2>Company Information</h2>
+        <form id="companyForm">
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required><br><br>
+
+            <label for="contact-info">Contact Information:</label>
+            <input type="text" id="contact-info" name="contact-info" required><br><br>
+
+            <label for="company-size">Company Size:</label>
+            <input type="text" id="company-size" name="company-size"><br><br>
+
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" name="industry"><br><br>
+
+            <label for="company-notes">Notes:</label><br>
+            <textarea id="company-notes" name="company-notes" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Save Company Profile</button>
+        </form>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section id="job-listings">
+        <h2>Job Listings</h2>
+        <form id="jobListingForm">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required><br><br>
+
+            <label for="company-select">Select Company:</label>
+            <select id="company-select" name="company-select" required>
+                <!-- Company names will be dynamically added here -->
+            </select><br><br>
+
+            <label for="listing-notes">Notes:</label><br>
+            <textarea id="listing-notes" name="listing-notes" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Save Job Listing</button>
+        </form>
+    </section>
+
+    <!-- Dashboard Overview Section -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div id="dashboard-stats">
+            <canvas id="applicationStatusChart" width="400" height="200"></canvas>
+            <canvas id="responseRateChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section id="search-filter">
+        <h2>Search & Filter Applications</h2>
+       
+        <label for="filter-status">Filter by Status:</label>
+        <select id="filter-status" name="filter-status">
+            <option value="">All</option>
+            <option value="applied">Applied</option>
+            <option value="interviewed">Interviewed</option>
+            <option value="offered">Offered</option>
+            <option value="rejected">Rejected</option>
+            <option value="accepted">Accepted</option>
+        </select><br><br>
+
+        <button id="filter-btn">Apply Filter</button>
+        <br><br>
+        <div id ="applications-list"></div>
+    </section>
+
+   
+   <!-- Reminder Section -->
+<section id="reminderSection">
+    <h3>Follow-Up Reminder</h3>
+    <form id="reminderForm"> 
+        <label for="reminder-date">Set Reminder Date:</label>
+        <input type="date" id="reminder-date" name="reminder-date" required><br><br>
+
+        <label for="reminder-message">Reminder Message:</label><br>
+        <textarea id="reminder-message" name="reminder-message" rows="4" cols="50" placeholder="Enter reminder message..." required></textarea><br><br>
+
+        <button type="submit">Save</button> 
+    </form>
+</section>
+
+        <script src="../company"></script>
+        <script src="../visual"></script>
+    
+</body>
+</html>
