@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const Sequelize  = require("sequelize");
 
 const sequelize= new Sequelize(process.env.DB_NAME, process.env.DB_USER , process.env.DB_PASSWORD,{
@@ -9,8 +10,8 @@ const sequelize= new Sequelize(process.env.DB_NAME, process.env.DB_USER , proces
 })
 
 
-
-/*const Sequelize  = require("sequelize");
+/*
+const Sequelize  = require("sequelize");
 
 const sequelize= new Sequelize('job_app', 'root' , 'admin1234',{
     dialect : 'mysql',

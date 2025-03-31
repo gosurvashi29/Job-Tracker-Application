@@ -24,7 +24,7 @@ var cors= require("cors");
  
 app.use(cors({
     origin: "*",  // Allow all origins 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow all methods 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow all methods,
   allowedHeaders: ['Content-Type', 'Authorization'], 
   }));
 app.use(bodyParser.json());
